@@ -1,4 +1,4 @@
-# grunt-inline-imgsize [![Build Status](https://travis-ci.org/sartak/grunt-inline-imgsize.png?branch=master)](https://travis-ci.org/sartak/grunt-inline-imgsize)
+# grunt-inline-imgsize
 
 > Inject width and height for img tags
 
