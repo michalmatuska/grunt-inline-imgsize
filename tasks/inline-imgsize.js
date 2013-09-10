@@ -16,7 +16,8 @@ module.exports = function(grunt) {
     };
 
     var options = {
-        encoding: 'utf8'
+        encoding: 'utf8',
+        quote: ''
     };
 
     grunt.registerMultiTask('inlineImgSize', 'Inject width and height for img tags', function() {
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
                         return;
                     }
 
-                    var replacement = tag.replace(/^<img/, "<img width=" + dimensions.width + " height=" + dimensions.height);
+                    var replacement = tag.replace(/^<img/, "<img width="+ options.quote + dimensions.width + options.quote +" height="+ options.quote + dimensions.height + options.quote);
 
                     contents = contents.replace(tag, replacement);
                 });
